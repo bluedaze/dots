@@ -1,0 +1,2 @@
+xrandr --primary HDMI3
+xrandr --output HDMI1 --auto --right-of HDMI3
