@@ -1,5 +1,5 @@
 # .bashrc
-
+HISTSIZE= HISTFILESIZE= # Infinite bash history
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -19,3 +19,5 @@ export PATH
 export PS1='[\W] \h: '
 # Lists monitors connected to pc
 alias lm="xrandr | grep ' connected' | cut -f1 -d ' '"
+# Print list of all files, one column, without quotes, showing direcotires with a slask indicator, and sorted by extension. 
+alias lf="ls -1aNpX --group-directories-first"
