@@ -17,4 +17,5 @@ export PATH
 
 # User specific aliases and functions
 export PS1='[\W] \h: '
-# typeOfUser@DomainName[pwd]:
+# Lists monitors connected to pc
+alias lm="xrandr | grep ' connected' | cut -f1 -d ' '"
