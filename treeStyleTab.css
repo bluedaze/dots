@@ -1,0 +1,131 @@
+/* Show title of unread tabs with red and italic font */
+/*
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+*/
+
+/* Add private browsing indicator per tab */
+/*
+:root.sidebar tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+*/
+/* Hide border on tab bar, force its state to 'scroll', adjust margin-left for width of scrollbar. */ 
+#tabbar { border: 0; overflow-y: scroll !important; margin-left: -15px !important; scrollbar-width: auto; }
+
+/*Highlight active tab*/
+tab-item.active tab-item-substance {
+  height: 39px !important;
+}
+tab-item.active .background {
+  background-color: steelblue;
+}
+tab-item.active .label-content {
+  font-weight: bold;
+  font-size: 14px;
+}
+tab-item.active tab-twisty,
+tab-item.active .label-content,
+tab-item.active tab-counter {
+  color: #fff;
+}
+
+/* Less visible tab dividers. 
+   A black border with a very low alpha slightly darkens any color. */
+   tab-item-substance {
+    border: solid 1px #00000012; 
+  }
+  
+/* Hide .twisty and adjust margins so favicons have 7px on left. */
+tab-item .twisty {
+    visibility: hidden;
+    margin-left: -12px;
+}
+
+/* Push tab labels slightly to the right so they're completely hidden in collapsed state. */
+tab-item .label {
+    margin-left: 10px;
+}
+
+/* Hide close buttons on tabs. */
+tab-item .closebox {
+    visibility: collapse;
+}
+
+tab-item:hover .closebox {
+    visibility: initial;
+}
+
+/* Hide sound playing/muted button. */
+.sound-button::before {
+    display: none !important;
+}
+
+/* Center the new tab sign in collapsed state. */
+.newtab-button{
+    padding-left: 0.48em !important;
+}
+
+/* ################################################ */
+/* ##### COLOR THEME ############################## */
+/* ################################################ */
+
+:root {
+    background-color: #383838;
+}
+#tabbar {
+    border-right: 1px solid #1d1d1d;
+    box-shadow: none !important;
+}
+tab-item {
+    box-shadow: none !important;
+}
+tab-item:hover {
+   filter: opacity(80%) drop-shadow(0px 0px 0px #3498DB);
+}
+
+/* Adjust style for tab that has sound playing. */
+tab-item.sound-playing .favicon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background: #FFFFFF;
+    animation: pulse 2s ease-out 0s infinite;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Adjust style for tab that is muted. */
+tab-item.muted {
+    opacity: 0.5;
+}
+
+/* Better alignment of Favicons when collapsed */
+tab-item[data-level][data-level="0"] tab-item-substance {
+  margin-left: 2% !important;
+}
+tab-item[data-level][data-level="1"] tab-item-substance {
+  margin-left: 4% !important;
+}
+tab-item[data-level][data-level="2"] tab-item-substance {
+  margin-left: 6% !important;
+}
+tab-item[data-level][data-level="3"] tab-item-substance {
+  margin-left: 8% !important;
+}
+tab-item[data-level][data-level="4"] tab-item-substance {
+  margin-left: 10% !important;
+}
+tab-item[data-level][data-level="5"] tab-item-substance {
+  margin-left: 12% !important;
+}
+tab-item[data-level][data-level="6"] tab-item-substance {
+  margin-left: 14% !important;
+}
+tab-item[data-level][data-level="7"] tab-item-substance {
+  margin-left: 16% !important;
+}
